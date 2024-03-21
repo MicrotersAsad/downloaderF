@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "FilmPlus APK Download Latest Version (No Ads) ",
+  "version": "1.0",
+  "description": "Download Any Videos",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "iconD.png",
+      "48": "iconD.png",
+      "128": "iconD.png"
+    }
+  },
+ 
+
+  "background": {
+    "service_worker": "background.js"
+  }
+
+}
