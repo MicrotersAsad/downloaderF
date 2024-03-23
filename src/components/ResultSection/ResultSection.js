@@ -2,12 +2,16 @@ import style from "./ResultSection.module.css";
 
 const ResultSection = (props) => {
   // Safely handle the title in case it is not a string or is undefined
-  const title = typeof props.result.title === 'string' ? (props.result.title.slice(0, 60) + " ....") : "No title available";
+  const title =
+    typeof props.result.title === "string"
+      ? props.result.title.slice(0, 60) + " ...."
+      : "No title available";
 
   const thumb = props.result.thumb;
 
   // Ensure that `thumb` has a valid value to avoid broken image links
-  const thumbSrc = thumb && thumb.length > 0 ? thumb : 'path/to/default/thumbnail.png'; // Provide a default thumbnail path
+  const thumbSrc =
+    thumb && thumb.length > 0 ? thumb : "path/to/default/thumbnail.png"; // Provide a default thumbnail path
 
   return (
     <div className={style["result-div"]}>
@@ -32,7 +36,8 @@ const ResultSection = (props) => {
                   <td>{url.quality}</td>
                   <td>{url.size} MB</td>
                   <td>
-                    <a href={url.url} target="_blank" rel="noreferrer">
+                    {/* Updated to open download link in the same tab */}
+                    <a href={url.url} download>
                       Download
                     </a>
                   </td>
