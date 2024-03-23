@@ -49,6 +49,7 @@ const InputSection = (props) => {
 
   return (
     <form method="POST" onSubmit={submitHandler}>
+   
       <img className={style["url-icon"]} src={urlLightIcon} alt="url icon"></img>
       <input
         className={
